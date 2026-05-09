@@ -30,39 +30,6 @@ Aplikacja webowa zbudowana w mikro-frameworku **Flask**, umożliwiająca rejestr
 
 ---
 
-## 🗂️ Struktura projektu
-
-```
-app/
-├── __init__.py        # Fabryka aplikacji Flask
-├── db.py              # Połączenie z SQLite, inicjalizacja bazy
-├── auth.py            # Blueprint: rejestracja, logowanie, wylogowanie
-├── blog.py            # Blueprint: lista postów, tworzenie posta
-├── admin.py           # Blueprint: panel admina
-├── schema.sql         # Schemat bazy danych
-└── templates/
-    ├── base.html
-    ├── auth/
-    │   ├── login.html
-    │   └── register.html
-    ├── blog/
-    │   ├── index.html
-    │   └── create.html
-    └── admin/
-        └── dashboard.html
-```
-
----
-
-## 🗄️ Schemat bazy danych
-
-```sql
-user (id, username, password, is_admin)
-post (id, author_id → user.id, title, body)
-```
-
----
-
 ## 🛠️ Stack technologiczny
 
 | Technologia | Zastosowanie |
@@ -84,7 +51,7 @@ post (id, author_id → user.id, title, body)
 
 ```bash
 # 1. Sklonuj repozytorium
-git clone https://github.com/[twoj-login]/flask-blog.git
+git clone https://github.com/mczyzewska/flask-blog.git
 cd flask-blog
 
 # 2. Utwórz i aktywuj środowisko wirtualne
@@ -121,8 +88,4 @@ Aplikacja będzie dostępna pod adresem `http://localhost:5000`.
 
 ---
 
-## 👤 Autor
 
-**[Imię i Nazwisko]**  
-[Opcjonalnie: link do profilu GitHub]  
-[Rok]
