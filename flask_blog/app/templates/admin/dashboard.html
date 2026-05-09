@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+
+    <h2>Users</h2>
+    <ul>
+        {% for user in users %}
+            <li>
+                {{ user.username }}
+                {% if user.is_admin == 0 %}
+                    <form method="post" action="{{ url_for('admin.delete_user', user_id=user.id) }}">
+                        <button type="submit">Delete User</button>
+                    </form>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h2>Posts</h2>
+    <ul>
+        {% for post in posts %}
+            <li>
+                {{ post.title }}
+                <form method="post" action="{{ url_for('admin.delete_post', post_id=post.id) }}">
+                    <button type="submit">Delete Post</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
