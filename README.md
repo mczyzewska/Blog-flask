@@ -88,4 +88,4 @@ Aplikacja będzie dostępna pod adresem `http://localhost:5000`.
 
 ---
 
-
+*Projekt stanowi część portfolio akademickiego*
